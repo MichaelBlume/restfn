@@ -40,7 +40,7 @@ Ring.
 How does a map literal represent a URL structure? Well, you can probably
 partially guess, but it works a bit like this. You pass in an object
 implementing IFn, probably a map. Then the client sends in a URI. The URI is
-split into segments. Restfn applies your oject to the first segment, then
+split into segments. Restfn applies your object to the first segment, then
 applies the result to the next segment, until there's no more, then returns the
 result.
 
@@ -92,7 +92,7 @@ Restfn has a bit of extra smarts for handling java ```Map```s and ```List```s.
 By extra smarts, I mean, if it can't apply an object to a segment, it'll try
 calling ```.get``` instead.
 
-If your request causes an exception,you'll get a status code 500 and a
+If your request causes an exception, you'll get a status code 500 and a
 traceback.
 
 Functions in a {:post fn :delete fn :put fn} map can optionally take a

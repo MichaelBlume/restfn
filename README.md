@@ -95,7 +95,7 @@ calling ```.get``` instead.
 If your request causes an exception, you'll get a status code 500 and a
 traceback.
 
-Functions in a {:post fn :delete fn :put fn} map can optionally take a
+Functions in a ```{:post fn :delete fn :put fn}``` map can optionally take a
 parameter -- that parameter will be the request object. If you wrap your
 handler in middleware that enhances the request object, these fns will, of
 course, get the enhanced request.

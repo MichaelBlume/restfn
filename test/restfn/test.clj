@@ -19,6 +19,8 @@
   (get-rest-handler
     {"list" [1 3 5]
      "map" {"foo" "bar"}
+     "atom" (atom 5)
+     "doubleatom" (atom (atom 7))
      "javalist" (java-list 5 9 7)
      "simplefn" inc
      "complexfn" (fn [x] {"key" x})
@@ -44,6 +46,8 @@
     "/list/" [1 3 5]
     "/list/0" 1
     "/list/1" 3
+    "atom" 5
+    "doubleatom" 7
     "map" {"foo" "bar"}
     "map/foo" "bar"
     "javalist/" [5 9 7]

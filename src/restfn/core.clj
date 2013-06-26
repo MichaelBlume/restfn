@@ -16,6 +16,11 @@
   RestSerializable
   {:rest-serialize identity})
 
+(extend-type clojure.lang.IDeref
+  RestSerializable
+  (rest-serialize [this]
+    (rest-serialize @this)))
+
 (defn- descend-one [obj-raw seg-raw]
   (let [obj (rest-serialize obj-raw)
         seg (try-parse-int seg-raw)]

@@ -11,9 +11,9 @@
       (.add ret x))
     ret))
 
-(extend java.util.regex.Pattern
+(extend-type java.util.regex.Pattern
   RestSerializable
-  {:rest-serialize (fn [r] #(re-matches r %))})
+  (rest-serialize [r] #(re-matches r %)))
 
 (def handler
   (get-rest-handler

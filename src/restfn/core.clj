@@ -21,6 +21,10 @@
   (rest-serialize [this]
     (rest-serialize @this)))
 
+(extend nil
+  RestSerializable
+  {:rest-serialize identity})
+
 (defn- descend-one [obj-raw seg-raw]
   (let [obj (rest-serialize obj-raw)
         seg (try-parse-int seg-raw)]

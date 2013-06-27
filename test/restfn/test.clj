@@ -48,6 +48,7 @@
     "/list/1" 3
     "atom" 5
     "doubleatom" 7
+    "nil" nil
     "map" {"foo" "bar"}
     "map/foo" "bar"
     "javalist/" [5 9 7]

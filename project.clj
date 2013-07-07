@@ -1,4 +1,4 @@
-(defproject org.clojars.michaelblume/restfn "0.0.3"
+(defproject org.clojars.michaelblume/restfn "0.0.4-SNAPSHOT"
   :description "A simple lib for creating admin REST APIs"
   :url "https://github.com/MichaelBlume/restfn"
   :license {:name "Eclipse Public License"

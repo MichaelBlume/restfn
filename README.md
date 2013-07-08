@@ -13,7 +13,7 @@ You add restfn to your app in more or less the usual way.
 In Leiningen:
 
 ```clj
-[restfn "0.0.1"]
+[restfn "0.0.4"]
 ```
 
 In Maven:
@@ -22,7 +22,7 @@ In Maven:
 <dependency>
   <groupId>restfn</groupId>
   <artifactId>restfn</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.4</version>
 </dependency>
 ```
 

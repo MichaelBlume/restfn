@@ -1,4 +1,4 @@
-(defproject restfn "0.0.4"
+(defproject restfn "0.0.5-SNAPSHOT"
   :description "A simple lib for creating admin REST APIs"
   :url "https://github.com/MichaelBlume/restfn"
   :license {:name "Eclipse Public License"

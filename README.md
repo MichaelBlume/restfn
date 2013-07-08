@@ -13,14 +13,14 @@ You add restfn to your app in more or less the usual way.
 In Leiningen:
 
 ```clj
-[org.clojars.michaelblume/restfn "0.0.1"]
+[restfn "0.0.1"]
 ```
 
 In Maven:
 
 ```xml
 <dependency>
-  <groupId>org.clojars.michaelblume</groupId>
+  <groupId>restfn</groupId>
   <artifactId>restfn</artifactId>
   <version>0.0.1</version>
 </dependency>

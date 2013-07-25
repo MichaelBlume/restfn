@@ -5,12 +5,6 @@
         (restfn core)
         (cheshire [core :only [parse-string]])))
 
-(defn java-list [& args]
-  (let [ret (ArrayList.)]
-    (doseq [x args]
-      (.add ret x))
-    ret))
-
 (extend-type java.util.regex.Pattern
   RestSerializable
   (rest-serialize [r] #(re-matches r %)))
@@ -21,7 +15,7 @@
      "map" {"foo" "bar"}
      "atom" (atom 5)
      "doubleatom" (atom (atom 7))
-     "javalist" (java-list 5 9 7)
+     "javalist" (ArrayList. [5 9 7])
      "simplefn" inc
      "complexfn" (fn [x] {"key" x})
      "pattern" #"(.*)and(.*)"

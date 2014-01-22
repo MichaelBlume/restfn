@@ -2,6 +2,7 @@ restfn
 ======
 
 [![Build Status](https://travis-ci.org/MichaelBlume/restfn.png?branch=master)](https://travis-ci.org/MichaelBlume/restfn)
+[![Dependencies Status](http://jarkeeper.com/MichaelBlume/restfn/status.png)](http://jarkeeper.com/MichaelBlume/restfn)
 
 This is a library for quickly bolting an admin REST API on to your long-running
 app. Specifically it's a library for specifying the URL structure of that API

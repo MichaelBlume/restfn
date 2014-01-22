@@ -59,7 +59,7 @@
             body     (str
                        (generate-string body-obj {:pretty true})
                        \newline)]
-        {:status 200
+        {:status (if (nil? body-obj) 404 200)
          :headers {"Content-Type" "application/json"}
          :body body})
       (catch Throwable e

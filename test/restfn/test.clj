@@ -42,7 +42,6 @@
     "/list/1" 3
     "atom" 5
     "doubleatom" 7
-    "nil" nil
     "map" {"foo" "bar"}
     "map/foo" "bar"
     "javalist/" [5 9 7]
@@ -52,6 +51,9 @@
     "complexfn/hello/key" "hello"
     "pattern/fooandbar" ["fooandbar" "foo" "bar"]
     "seq" [0 1 2]))
+
+(deftest test-404
+  (is (= 404 (:status (handler {:uri "/null" :request-method :get})))))
 
 (deftest testrest
   (are [req result]

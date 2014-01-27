@@ -12,6 +12,10 @@
   (rest-serialize [this]
    "Convert to something Cheshire can JSONify"))
 
+(defmacro rest-delay [& forms]
+  `(reify RestSerializable
+     (rest-serialize [_] ~@forms)))
+
 (extend Object
   RestSerializable
   {:rest-serialize identity})

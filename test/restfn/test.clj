@@ -9,6 +9,8 @@
   RestSerializable
   (rest-serialize [r] #(re-matches r %)))
 
+(def delay-calls (atom 0))
+
 (def handler
   (get-rest-handler
     {"list" [1 3 5]
@@ -21,6 +23,7 @@
      "pattern" #"(.*)and(.*)"
      "seq" (for [x (range 3)]
              (reify RestSerializable (rest-serialize [_] x)))
+     "rest-delay" (rest-delay (swap! delay-calls inc))
      "rest" {:post (fn [req] (:req-key req))
              :delete (fn [] "deleted")}}))
 
@@ -70,3 +73,9 @@
     (is (= (:headers result) {"Content-Type" "text/plain"}))
     (is (re-matches #".*IndexOutOfBoundsException.*"
                     ((split-lines (:body result)) 0)))))
+
+(deftest test-delay
+  (let [delay-calls-init @delay-calls]
+    (doseq [n (range 1 100)]
+      (is (= (+ n delay-calls-init)
+             (object-from-uri "rest-delay"))))))

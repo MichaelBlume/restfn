@@ -28,7 +28,7 @@
   (let [res (handler req)]
     (is (= (:status res) 200) res)
     (is (= (:headers res) {"Content-Type" "application/json"}) res)
-    (parse-string (:body (handler req)))))
+    (parse-string (:body res))))
 
 (defn object-from-uri [uri]
   (object-from-request {:uri uri :request-method :get}))

@@ -15,9 +15,7 @@ You add restfn to your app in more or less the usual way.
 
 In Leiningen:
 
-```clj
-[restfn "0.1.1"]
-```
+[![Latest Clojars version](https://clojars.org/restfn/latest-version.svg?cachebust=1)](http://clojars.org/restfn)
 
 In Maven:
 

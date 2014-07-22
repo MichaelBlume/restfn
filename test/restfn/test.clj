@@ -72,7 +72,7 @@
     (is (= (:status result) 500))
     (is (= (:headers result) {"Content-Type" "text/plain"}))
     (is (re-matches #".*IndexOutOfBoundsException.*"
-                    ((split-lines (:body result)) 0)))))
+                    (-> result :body split-lines first)))))
 
 (deftest test-delay
   (let [delay-calls-init @delay-calls]

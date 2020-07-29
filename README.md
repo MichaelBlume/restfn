@@ -4,6 +4,10 @@ restfn
 [![Build Status](https://travis-ci.org/MichaelBlume/restfn.png?branch=master)](https://travis-ci.org/MichaelBlume/restfn)
 [![Dependencies Status](http://jarkeeper.com/MichaelBlume/restfn/status.png)](http://jarkeeper.com/MichaelBlume/restfn)
 
+Honestly you should probably use 
+[compojure-api](https://github.com/metosin/compojure-api), it's lightweight and
+powerful, I just didn't know it existed when I wrote this.
+
 This is a library for quickly bolting an admin REST API on to your long-running
 app. Specifically it's a library for specifying the URL structure of that API
 using nested Clojure literals. You pass a map literal specifying your API
